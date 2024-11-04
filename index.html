@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment32</title>
+    <style>
+        #dice{
+            height:200px;
+            width:200px;
+            border:2px solid black;
+           margin-left:40%;
+           padding:20px;
+           border-radius:10px 12px;
+        }
+        .dice{
+            margin-left:40%;
+            padding:10px;
+            border:2px solid black;
+            font-family:'Times New Roman', Times, serif;
+            font-weight:bold;
+            font-size:20px;
+            border-radius:10px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center">Dice Roller</h1>
+    <img src="./images/dice1.png" alt="dice png " id="dice">
+    <br><br>
+    <button type="button" onclick="Dice()" class="dice">Roll Dice</button>
+    <script>
+        const image=document.getElementById('dice');
+        function Dice(){
+            const min=1;
+            const max=7;
+            const Number=Math.floor(Math.random()*(max-min)+min);
+            if(Number==1){
+                image.src="./images/dice1.png";
+            }
+            if(Number==2){
+                image.src="./images/dice2.png";
+            }
+            if(Number==3){
+                image.src="./images/dice3.png";
+            }
+            if(Number==4){
+                image.src="./images/dice4.png";
+            }
+            if(Number==5){
+                image.src="./images/dice5.png";
+            }
+            if(Number==6){
+                image.src="./images/dice6.png";
+            }
+        }
+
+    </script>
+    
+</body>
+</html>
